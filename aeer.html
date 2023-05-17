@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registro de Clientes</title>
+    <style>
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Registro de Clientes</h1>
+    <form>
+      <label>
+        Nombre:
+        <input type="text" name="nombre" required>
+      </label>
+      <label>
+        Apellido:
+        <input type="text" name="apellido" required>
+      </label>
+      <label>
+        Correo electrónico:
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Teléfono:
+        <input type="tel" name="telefono">
+      </label>
+      <button type="submit">Registrar</button>
+    </form>
+    <script>
+      const form = document.querySelector('form');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const data = new FormData(form);
+        const nombre = data.get('nombre');
+        const apellido = data.get('apellido');
+        const email = data.get('email');
+        const telefono = data.get('telefono');
+        const cliente = { nombre, apellido, email, telefono };
+        console.log(cliente);
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
