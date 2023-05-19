@@ -1,35 +1,63 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title>Registro de Clientes</title>
+    <title>Formulario de registro</title>
     <style>
       label {
-        display: block;
+        display:flex;
         margin-bottom: 10px;
       }
     </style>
+    
+   
+    <link rel="stylesheet" href="form.css">
   </head>
+
   <body>
-    <h1>Registro de Clientes</h1>
+    <h1>Formulario de Registro</h1>
+
     <form>
       <label>
         Nombre:
-        <input type="text" name="nombre" required>
+        <input type="text" name="nombre"  placeholder="Ingrese nombre" required>
       </label>
       <label>
         Apellido:
-        <input type="text" name="apellido" required>
+        <input type="text" name="apellido" placeholder="Ingrese apellido" required>
       </label>
+
+      <label id="Sex">
+        
+        <p>Sexo: </p>
+        <input type="radio" name="sexo" value="h">
+        <p>Hombre</p>
+        <input type="radio" name="sexo" value="h">
+        <p>Mujer</p>
+
+         
+      </label>
+    
       <label>
         Correo electrónico:
-        <input type="email" name="email" required>
+        <input type="email" name="email" placeholder="Ingrese correo" required>
       </label>
-      <label>
-        Teléfono:
-        <input type="tel" name="telefono">
-      </label>
-      <button type="submit">Registrar</button>
+      <br>
+      <input type="checkbox" value="h">
+      
+        Deseo recibir Informacion.
+      <br>
+      
+      <input type="checkbox" value="h">
+      
+        Declaro haber leido term y cond.
+      
+
+      <br>
+      <br>
+      <button type="submit">Enviar</button>
     </form>
+
     <script>
       const form = document.querySelector('form');
       form.addEventListener('submit', (event) => {
@@ -45,4 +73,5 @@
       });
     </script>
   </body>
+  
 </html>
