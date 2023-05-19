@@ -8,6 +8,11 @@
         display:flex;
         margin-bottom: 10px;
       }
+      select{
+        display: block;
+        margin-bottom: 10px;
+      }
+      
     </style>
     
    
@@ -42,6 +47,21 @@
         Correo electrónico:
         <input type="email" name="email" placeholder="Ingrese correo" required>
       </label>
+      <p id="pobla">
+       <p>Poblacion:</p>
+      
+        <select name="poblacion">
+            <option value="text">Argentina</option>
+            <option value="text">Brasil</option>
+            <option value="text">Colombia</option>
+            <option value="text">Peru</option>
+        </select>
+      </p>
+    <label id="descripcion">
+        <p>Descripcion:</p>
+        <textarea  id="area" cols="50" rows="10"></textarea>
+    </label>
+
       <br>
       <input type="checkbox" value="h">
       
